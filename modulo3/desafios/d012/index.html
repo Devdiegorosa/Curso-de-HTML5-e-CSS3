@@ -90,6 +90,7 @@
         }
 
         section#img02 {
+            
             background-image: url(imagens/background002.jpg);
             background-repeat: no-repeat;
             background-position: right center;
@@ -127,6 +128,54 @@
 
         footer p a:hover {
             text-decoration: underline;
+        }
+
+        /* =========================
+        RESPONSIVO (mobile/tablet)
+        ========================= */
+        @media (max-width: 768px) {
+
+        /* Tipografia: 3.5vw no celular fica pequeno demais */
+        p {
+            font-size: 18px;      /* ajuste seguro no iPhone */
+            line-height: 1.8;
+            margin: 40px 20px;
+        }
+
+        /* Título do header: 7vw pode ficar ok, mas garantimos limites */
+        h1 {
+            font-size: 42px;
+        }
+
+        .letra-grande {
+            font-size: 56px;
+        }
+
+        /* iOS não suporta bem background-attachment: fixed */
+        section#img01,
+        section#img02 {
+            background-attachment: scroll;  /* fallback correto pro iPhone */
+            background-position: center;    /* melhora enquadramento no mobile */
+            padding: 60px 0;                /* dá mais “respiro” */
+        }
+
+        /* Seu margin: 30px 50% ... deixa o bloco super estreito no celular */
+        section#img01 p,
+        section#img02 p {
+            margin: 20px 20px;
+            padding: 12px;
+        }
+        }
+
+        /* =========================
+        iOS Safari específico (extra)
+        Ajuda em alguns casos de bug de renderização
+        ========================= */
+        @supports (-webkit-touch-callout: none) {
+        section#img01,
+        section#img02 {
+            background-attachment: scroll;
+        }
         }
     </style>
 </head>
