@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela desafio final</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 500px;
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin: 10px;
+        }
+
+        th, #media {
+            border: 1px solid black;
+            background-color: gray;
+            font-weight: bold;
+            color: white;
+            padding: 8px;
+        }
+
+        .area {
+            background-color: white;
+            color: black;
+        }
+
+        .destaque {
+            text-align: left;
+        }
+
+        .num {
+            text-align: center;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>
+        <h1>Tabela desafio final</h1>
+    </caption>
+        <thead>
+            <tr>
+                <th rowspan="2" scope="col">Área</th>
+                <th rowspan="2" scope="col">Disciplina</th>
+                <th colspan="2" scope="colgroup">Notas</th>
+                <th rowspan="2" scope="col">Média</th>
+            </tr>
+            <tr>
+                <th scope="col">Nota 1</th>
+                <th scope="col">Nota 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="4" scope="rowgroup" class="area">Exatas</th>
+                <td>Matemática</td>
+                <td class="num">8.5</td>
+                <td class="num">7.0</td>
+                <td class="num">7.75</td>
+            </tr>
+            <tr>
+                <td>Física</td>
+                <td class="num">9.0</td>
+                <td class="num">8.5</td>
+                <td class="num">8.75</td>
+            </tr>
+            <tr>
+                <td>Química</td>
+                <td class="num">7.5</td>
+                <td class="num">8.0</td>
+                <td class="num">7.75</td>
+            </tr>
+            <tr>
+                <td>Biologia</td>
+                <td class="num">8.0</td>
+                <td class="num">7.5</td>
+                <td class="num">7.75</td>
+            </tr>
+            <tr>
+                <th colspan="4" scope="row" class="destaque">Média de Exatas</th>
+                <td class="num" id="media">8.0</td>
+            </tr>
+            <tr>
+                <th rowspan="2" scope="rowgroup" class="area">Humanas</th>
+                <td>História</td>
+                <td class="num">8.0</td>
+                <td class="num">7.5</td>
+                <td class="num">7.75</td>
+            </tr>
+            <tr>
+                <td>Geografia</td>
+                <td class="num">7.5</td>
+                <td class="num">8.0</td>
+                <td class="num">7.75</td>
+            </tr>
+            <tr>
+                <th colspan="4" scope="row" class="destaque">Média de Humanas</th>
+                <td class="num" id="media">7.75</td>
+            </tr>
+        </tbody>
+    </table>
+    
+</body>
+</html>
