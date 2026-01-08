@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php">
+        <fieldset>
+            <legend>Dados pessoais</legend>
+            <!-- Tag "fieldset" coloca uma borda ao redor dos grupos que estão dentro de suas tag's.
+             A tag "legend" coloca a legenda no grupo de tag's que estão dentro da tag 'fieldset'. -->
+            <p>
+                <label for="iemail">E-mail</label>
+                <input type="email" name="email" id="iemail" autocomplete="email">
+            </p>
+            <p>
+                <label for="itel">Telefone</label>
+                <input type="tel" name="tel" id="itel" autocomplete="tel" pattern="ˆd{2}\(\d{3}\)\d{3}\-\d{4}$" required placeholder="+1(xxx)xxx-xxxx">
+            </p>
+        </fieldset>
+        <!-- Estudar mais sobre RegEx (Expressões Regulares) 
+        - pattern: "Padrão de telefone que quero no campo 'Telefone'"
+        \(\ -> Vai abrir colcheia.
+        \)\ -> Vai fechar colcheia.
+        d{2} -> permite colocar dois números.
+        d{3} -> permite colocar três números.  
+        -->
+        <p>
+            <input type="submit" value="Enviar">
+    
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+    
+</body>
+</html>
