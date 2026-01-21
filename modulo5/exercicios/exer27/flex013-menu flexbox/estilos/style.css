@@ -39,12 +39,13 @@ ul li a:hover {
     color: black; 
     border-radius: 5px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.377);
+    transition: background-color .3s;
 }
 
 ul li {
-    background-color: black;
     width: 90vw;
     margin-top: 5px;
+    background-color: black;
     list-style: none;
     border-radius: 5px;
     text-align: center;
